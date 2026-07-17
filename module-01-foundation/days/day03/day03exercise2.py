@@ -1,6 +1,6 @@
 # Dictionary of grocery items and prices (ETB)
 grocery = {
-    "Coffee": 120,
+    "Coffee": 220,
     "Bread": 50,
     "Milk": 80,
     "Tomato": 40,
@@ -9,4 +9,5 @@ grocery = {
 
 print("Price Report:")
 for item, price in grocery.items():
-    print(f"{item}: {price} ETB")
+    if price <= 200:
+     print(f"{item}: {price} ETB")
