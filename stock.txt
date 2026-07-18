@@ -1,0 +1,3 @@
+Paracetamol,-10
+Amoxicillin,20
+Insulin,-4
