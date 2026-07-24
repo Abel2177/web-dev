@@ -1,0 +1,91 @@
+# ==========================================
+# Exercise 1: Name the Big-O
+# ==========================================
+
+# 1. List Index
+numbers = [10, 20, 30, 40, 50]
+print(numbers[2])
+
+# Big-O: O(1)
+# Why?
+# Accessing an element by its index takes the same amount of time
+# no matter how many items are in the list. Python jumps directly
+# to the required position.
+
+
+# ------------------------------------------
+
+# 2. Single Loop
+numbers = [10, 20, 30, 40, 50]
+
+for num in numbers:
+    print(num)
+
+# Big-O: O(n)
+# Why?
+# The loop visits each element exactly once.
+# If there are n items, it performs n operations.
+
+
+# ------------------------------------------
+
+# 3. Nested Loop
+numbers = [10, 20, 30]
+
+for i in numbers:
+    for j in numbers:
+        print(i, j)
+
+# Big-O: O(n²)
+# Why?
+# There is a loop inside another loop.
+# For every element, the inner loop runs through all elements again.
+# Total operations = n × n = n².
+
+
+# ------------------------------------------
+
+# 4. Dictionary Lookup
+student = {
+    "name": "Abel",
+    "age": 22,
+    "city": "Addis Ababa"
+}
+
+print(student["age"])
+
+# Big-O: O(1)
+# Why?
+# A dictionary uses hashing, so Python can find the value
+# directly using its key without checking every item.
+
+
+# ------------------------------------------
+
+# 5. Binary Search
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1
+
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+
+print(binary_search(numbers, 7))
+
+# Big-O: O(log n)
+# Why?
+# Binary search cuts the search space in half each time.
+# Instead of checking every element, it eliminates half
+# of the remaining elements with every comparison.
