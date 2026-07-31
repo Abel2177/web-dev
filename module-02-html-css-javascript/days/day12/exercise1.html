@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ethio Telecom Registration</title>
+</head>
+<body>
+  <h2>Ethio Telecom Service Registration</h2>
+  <form action="/submit" method="post">
+   
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="tel">Telephone (+251...):</label><br>
+    <input type="tel" id="tel" name="tel" 
+           pattern="^\+251\d{9}$" 
+           placeholder="+251XXXXXXXXX" 
+           required><br><br>
+    
+    <label for="branch"> Branch:</label><br>
+    <select id="branch" name="branch" required>
+      <option value="">--Select Branch--</option>
+      <option value="Bole">Bole</option>
+      <option value="Kazanchis">Kazanchis</option>
+      <option value="Piassa">Piassa</option>
+    </select><br><br>
+    
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>

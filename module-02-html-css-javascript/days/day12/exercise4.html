@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inaccessible Snippets</title>
+</head>
+<body>
+  <!-- 1. Div used as a button -->
+  <div type="alert('Clicked!')">Click Me</div>
+  <!--the correct version change div by button-->
+    <button type="button">Click Me</button>
+  <br><br>
+
+  <!-- 2. Unlabelled input -->
+  <input type="text" name="username">
+
+  <!--add label which makes it clear for the user what to do-->
+  <label for="username">Username:</label>
+  <br><br>
+
+  <!-- 3. Image with no alt -->
+  <img src="./img/landscapee.jpg">
+ <!--even with img we get explanation with the alt-->
+  <img src="./img/landscapee.jpg" alt=" Ethiopian landscape "width="400" height="200">
+</body>
+</html>
