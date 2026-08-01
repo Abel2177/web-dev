@@ -1,0 +1,55 @@
+
+:root {
+    --brown-hex: #5C3B1E;
+    --gold-hex: #D4A017;
+    --cream-hex: #F8F6F2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 15px 25px;
+    margin: 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.brown-btn {
+    background-color: hsl(28, 51%, 24%);
+    color: white;
+}
+
+.brown-btn:hover {
+    background-color: hsl(28, 51%, 35%);
+}
+
+.gold-btn {
+    background-color: hsl(43, 81%, 46%);
+    color: white;
+}
+
+.gold-btn:hover {
+    background-color: hsl(43, 81%, 58%);
+}
+
+.cream-btn {
+    background-color: hsl(40, 30%, 96%);
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.cream-btn:hover {
+    background-color: hsl(40, 30%, 99%);
+}
