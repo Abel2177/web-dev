@@ -10,16 +10,24 @@ else{
 var total = billNum + tip
 var fee = 0;
 const method = 'cbe birr'
-switch (method) {
-    case 'telebirr':
-        fee = total * 0.05
-        break;
-    case 'cbe birr':
-        fee = total * 0.01 
-        break;
-    default:
-        fee =  total * 0.02  
+// switch (method) {
+//     case 'telebirr':
+//         fee = total * 0.05
+//         break;
+//     case 'cbe birr':
+//         fee = total * 0.01 
+//         break;
+//     default:
+//         fee =  total * 0.02  
 
+// }
+if (method === 'telebirr'){
+    fee = total * 0.05
+}
+else if (method === 'cbe birr'){
+    fee = total * 0.01 
+} else {
+    fee =  total * 0.02  
 }
 const totalWithFee = billNum + tip + fee;
 
