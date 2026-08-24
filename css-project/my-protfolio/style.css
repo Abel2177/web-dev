@@ -1,0 +1,479 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+header {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+}
+
+.navbar {
+  width: min(1200px, 92%);
+  margin: auto;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 0;
+  gap: 20px;
+}
+
+.navbar h2 {
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: burlywood;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+section {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 8px;
+}
+
+.section-title p {
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  width: 100%;
+  min-height: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 70px 4%;
+
+  background-color: #222;
+  color: #fff;
+}
+
+.hero-content {
+  width: min(1100px, 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.welcome {
+  color: burlywood;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 6vw, 60px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: bisque;
+}
+
+.hero p {
+  color: #ddd;
+  font-size: clamp(16px, 2vw, 19px);
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.hero-image {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+
+  padding: 11px 22px;
+
+  background-color: brown;
+  color: #fff;
+
+  border: none;
+  border-radius: 5px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: burlywood;
+  color: #222;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  margin-top: 40px;
+}
+
+.skill {
+  background-color: #555;
+
+  padding: 30px 20px;
+
+  border-radius: 8px;
+
+  text-align: center;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.skill h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  color: white;
+}
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(260px, 1fr)
+  );
+
+  gap: 25px;
+
+  margin-top: 40px;
+}
+
+.project {
+  background-color: #f9f9f9;
+
+  padding: 25px;
+
+  border-radius: 8px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-number {
+  font-size: 26px;
+
+  font-weight: bold;
+
+  color: brown;
+
+  margin-bottom: 10px;
+}
+
+.project h3 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.project p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.project a.btn {
+  padding: 9px 18px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    width: 90%;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero-content {
+    gap: 40px;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+
+  .navbar {
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 20px 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px 20px;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    min-height: auto;
+
+    padding: 60px 5%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 35px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    max-width: 250px;
+  }
+
+
+  /* Skills */
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Sections */
+
+  section {
+    padding: 55px 0;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+  .navbar h2 {
+    font-size: 21px;
+  }
+
+  .nav-links {
+    gap: 10px 15px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 45px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-image img {
+    max-width: 210px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  section {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .section-title h2 {
+    font-size: 27px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+  }
+
+  .project {
+    padding: 20px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 350px) {
+
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero-image img {
+    max-width: 180px;
+  }
+}

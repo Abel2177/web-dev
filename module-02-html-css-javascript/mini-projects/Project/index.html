@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addis Eats — Order Ethiopian Food</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <h1>🍽️ Addis Eats</h1>
+            <input 
+                type="search" 
+                id="search" 
+                placeholder="🔍 Search dishes..." 
+                aria-label="Search menu"
+            />
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <!-- Menu Section -->
+        <section id="menu" aria-label="Menu">
+            <h2>Our Menu</h2>
+            <div id="menu-grid">
+                <!-- Dishes rendered by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Cart Aside -->
+        <aside id="cart" aria-label="Your order">
+            <h2>🛒 Your Order</h2>
+            <div id="cart-items">
+                <!-- Cart items rendered by JavaScript -->
+            </div>
+            <div id="cart-total">
+                <!-- Total rendered by JavaScript -->
+            </div>
+            <button id="checkout-btn" disabled>Checkout</button>
+        </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>📍 Bole, Addis Ababa · 📱 TeleBirr · 🇪🇹 Ethiopia</p>
+            <p>&copy; 2026 Addis Eats</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

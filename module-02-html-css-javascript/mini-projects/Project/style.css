@@ -1,0 +1,324 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+    --green: #2E8857;
+    --green-dark: #1F6B3F;
+    --green-light: #E8F5EE;
+    --ink: #1A2433;
+    --ink-light: #4A5A6E;
+    --line: #E2E8F0;
+    --bg: #FAFAFA;
+    --white: #FFFFFF;
+    --radius: 12px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --transition: 0.2s ease;
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+header h1 {
+    color: var(--green);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#search {
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--line);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color var(--transition);
+    background: var(--bg);
+}
+
+#search:focus {
+    outline: none;
+    border-color: var(--green);
+    background: var(--white);
+}
+
+/* ===== MAIN LAYOUT ===== */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 0;
+}
+
+/* ===== MENU SECTION ===== */
+#menu h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--ink);
+}
+
+#menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* ===== DISH CARD ===== */
+.dish {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dish:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dish h3 {
+    font-size: 1rem;
+    color: var(--ink);
+    margin: 0;
+}
+
+.dish .category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ink-light);
+    background: var(--bg);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.dish .price {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.dish .add-btn {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.6rem 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition);
+    margin-top: 0.25rem;
+}
+
+.dish .add-btn:hover {
+    background: var(--green-dark);
+}
+
+/* ===== CART ASIDE ===== */
+#cart {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    align-self: start;
+    position: sticky;
+    top: 90px;
+}
+
+#cart h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.5rem;
+}
+
+#cart-items {
+    min-height: 60px;
+}
+
+.cart-empty {
+    color: var(--ink-light);
+    font-style: italic;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+}
+
+.cart-item .item-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.cart-item .item-qty {
+    background: var(--bg);
+    padding: 0.1rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+}
+
+.cart-item .item-name {
+    font-weight: 500;
+}
+
+.cart-item .item-price {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.cart-item .remove-btn {
+    background: none;
+    border: none;
+    color: #E53E3E;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    transition: background var(--transition);
+}
+
+.cart-item .remove-btn:hover {
+    background: #FEE2E2;
+}
+
+#cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 2px solid var(--ink);
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#cart-total .total-amount {
+    color: var(--green);
+}
+
+#checkout-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition), opacity var(--transition);
+}
+
+#checkout-btn:hover:not(:disabled) {
+    background: var(--green-dark);
+}
+
+#checkout-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===== LOADING & ERROR STATES ===== */
+.loading, .error, .empty {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--ink-light);
+    grid-column: 1 / -1;
+}
+
+.error {
+    color: #E53E3E;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--white);
+    border-top: 1px solid var(--line);
+    padding: 1.5rem 0;
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--ink-light);
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE: TABLET & DESKTOP ===== */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #search {
+        width: 300px;
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    #cart {
+        position: sticky;
+        top: 90px;
+    }
+}
+
+/* ===== CHECKOUT MODAL (Day 24) ===== */
+/* Placeholder for tomorrow's work */
