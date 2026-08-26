@@ -6,6 +6,6 @@ button.addEventListener("click", event => {
   console.log(event.target);
 });
 
-box.addEventListener("click", event => {
+box.addEventListener("click", () => {
   console.log("Div clicked");
 });

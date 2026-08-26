@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TeleBirr Loyalty Points</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>TeleBirr Loyalty</h1>
+
+            <p class="subtitle">
+                Earn and redeem your loyalty points
+            </p>
+
+            <!-- Balance -->
+            <div class="balance-box">
+                <p>Current Points</p>
+                <h2 id="balance">0</h2>
+            </div>
+
+            <!-- Earn Points -->
+            <div class="section">
+
+                <h3>Earn Points</h3>
+
+                <label for="earnAmount">
+                    Amount Spent (ETB)
+                </label>
+
+                <input
+                    type="number"
+                    id="earnAmount"
+                    placeholder="Enter amount"
+                    min="0"
+                >
+
+                <button id="earnBtn">
+                    Earn Points
+                </button>
+
+            </div>
+
+
+            <!-- Redeem Points -->
+            <div class="section">
+
+                <h3>Redeem Points</h3>
+
+                <label for="redeemAmount">
+                    Points to Redeem
+                </label>
+
+                <input
+                    type="number"
+                    id="redeemAmount"
+                    placeholder="Enter points"
+                    min="0"
+                >
+
+                <button id="redeemBtn">
+                    Redeem Points
+                </button>
+
+            </div>
+
+
+            <!-- Earn Rule -->
+            <div class="section">
+
+                <h3>Earn Rule</h3>
+
+                <select id="ruleSelect">
+
+                    <option value="normal">
+                        Normal - 1 point per 10 ETB
+                    </option>
+
+                    <option value="holiday">
+                        Holiday - Double Points
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Message -->
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+    <script src="telebir.js"></script>
+
+</body>
+</html>
