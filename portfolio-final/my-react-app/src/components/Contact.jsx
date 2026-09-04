@@ -24,8 +24,8 @@ function Contact() {
         <h2 className="section-title">Contact Me</h2>
         <p className="contact-subtitle">
           Have a question or want to work together? Leave a message or email me directly at{" "}
-          <a href="mailto:abelaalemayehu@email.com" className="contact-mail-link">
-            abelalemayehu@example.com
+          <a href="mailto:abelaalemayehu10@email.com" className="contact-mail-link">
+            abelalemayehu10@email.com
           </a>
         </p>
 

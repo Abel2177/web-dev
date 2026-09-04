@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Doro Wot",
+    "price": 400,
+    "category": "Main Course",
+    "spicy": true
+  },
+  {
+    "id": 2,
+    "name": "Kitfo",
+    "price": 500,
+    "category": "Main Course",
+    "spicy": false
+  },
+  {
+    "id": 3,
+    "name": "Pasta",
+    "price": 250,
+    "category": "Side Dish",
+    "spicy": false
+  },
+  {
+    "id": 4,
+    "name": "Shiro",
+    "price": 200,
+    "category": "Side Dish",
+    "spicy": true
+  },
+  {
+    "id": 5,
+    "name": "Buna",
+    "price": 100,
+    "category": "Beverage",
+    "spicy": false
+  }
+]
