@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Doro Wot",
+    "price": 400,
+    "category": "Main Course"
+  },
+  {
+    "id": 2,
+    "name": "Tibs",
+    "price": 350,
+    "category": "Main Course"
+  },
+  {
+    "id": 3,
+    "name": "Shiro",
+    "price": 250,
+    "category": "Main Course"
+  },
+  {
+    "id": 4,
+    "name": "Azifa",
+    "price": 150,
+    "category": "Side Dish"
+  },
+  {
+    "id": 5,
+    "name": "Coffee",
+    "price": 100,
+    "category": "Beverage"
+  }
+]
