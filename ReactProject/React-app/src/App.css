@@ -33,7 +33,7 @@ nav p {
 .categories button {
     padding: 0.5rem 1rem;
     border: none;
-    background-color: white;
+    background-color:white;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.2s ease;
@@ -41,7 +41,7 @@ nav p {
 
 .category-btn:hover,
 .categories button:hover {
-    background-color: #ddd;
+    background-color:white;
 }
 
 .category-btn.active,
