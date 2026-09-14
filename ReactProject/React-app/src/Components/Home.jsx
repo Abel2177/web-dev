@@ -1,19 +1,24 @@
-import React from 'react'
+// Home.jsx
+import React, { useContext } from "react";
+import { CartContext } from "../App"; 
 
 function Home() {
-    return (
-        <div>
-            <nav>
-                <h2>BookShop</h2>
-                <p>Discover new books</p>
-            </nav>
-            <main>
-                <section>
-                    <h3>Featured Books</h3>
-                </section>
-            </main>
-        </div>
-    )
+  const { cart } = useContext(CartContext);
+
+  return (
+    <div>
+      <nav>
+        <h2>BookShop</h2>
+        <p>Discover new books</p>
+      </nav>
+      <main>
+        <section>
+          <h3>Featured Books</h3>
+        </section>
+      </main>
+      <p>Cart Items: {cart.length}</p>
+    </div>
+  );
 }
 
-export default Home
+export default Home;

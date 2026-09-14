@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+
 import Books from "../src/Components/Books";
 import Category from "../src/Components/Category";
 import "../src/App.css";
+
+
 function BookList() {
     const [books, setBooks] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("bestsellers");
@@ -9,7 +12,9 @@ function BookList() {
    const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem("favorites");
     return saved ? JSON.parse(saved) : [];
-});
+    });
+   
+
     const CATEGORIES = [
         { id: 'bestsellers', label: 'All / Trending' },
         { id: 'fiction', label: 'Fiction' },
@@ -68,7 +73,7 @@ function BookList() {
     key: doc.key,
     title: doc.title,
     authors: doc.author_name ? doc.author_name.map((name) => ({ name })) : [],
-    cover_id: doc.cover_i, // ✅ unify field name
+    cover_id: doc.cover_i, 
     first_publish_year: doc.first_publish_year,
   }))
 );
