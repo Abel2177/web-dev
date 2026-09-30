@@ -1,17 +1,32 @@
-import {foodData} from '../../data/food';
-export default async function Home({params}) {
-    const {id} = await params;
+import { notFound } from "next/navigation";
+import { foodData } from "../../data/food";
 
-    const foodItem = foodData.find((food) => food.id === parseInt(id));
+export function generateStaticParams() {
+  return foodData.map((food) => ({
+    id: String(food.id),
+  }));
+}
 
-    if (!foodItem) {
-        return <p>Food item not found.</p>;
-    }
-    return (
-        <main>
-            <h1>{foodItem.name}</h1>
-            <p>{foodItem.description}</p>
-            <p>Price: ${foodItem.price}</p>
-        </main>
-    );
+export default async function DishDetails({ params }) {
+  const { id } = await params;
+
+  const dish = foodData.find(
+    (food) => food.id === Number(id)
+  );
+
+  if (!dish) {
+    notFound();
+  }
+
+  return (
+    <main>
+      <h1>{dish.name}</h1>
+
+      <p>{dish.description}</p>
+
+      <p>Price: ${dish.price}</p>
+
+      <p>Category: {dish.category}</p>
+    </main>
+  );
 }
