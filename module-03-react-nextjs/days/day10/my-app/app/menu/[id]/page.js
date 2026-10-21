@@ -17,7 +17,6 @@ export default async function DishDetails({ params }) {
   if (!dish) {
     notFound();
   }
-
   return (
     <main>
       <h1>{dish.name}</h1>

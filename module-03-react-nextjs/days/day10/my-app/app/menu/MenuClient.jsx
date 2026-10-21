@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from "react";
 import CategoryBar from "./CategoryBar";
-import DishList from "./DishList";
+import DishList from "../components/DishList";
 import { foodData } from "../data/food";
 
 export default function MenuClient() {
