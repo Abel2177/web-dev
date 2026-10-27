@@ -1,4 +1,4 @@
-export const foodData = [
+export const dishes = [
   {
     id: 1, 
     name: 'Pizza',

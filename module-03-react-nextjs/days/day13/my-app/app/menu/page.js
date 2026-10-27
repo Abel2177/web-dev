@@ -1,37 +1,31 @@
-import Link from "next/link";
-import DishList from "./DishList";
-import CategoryBar from "./CategoryBar";
-import FilterShell from "./FilterShell";
-import MenuNavigation from "./MenuNavigation";
 
-async function getDishes() {
-  return [
-    { id: "1", name: "Doro Wot" },
-    { id: "2", name: "Tibs" },
-    { id: "3", name: "Shiro" },
-  ];
+import { Suspense } from "react";
+import DishList from "./DishList";
+
+function DishListFallback() {
+  return (
+    <p className="animate-pulse text-gray-500">
+      Loading dishes...
+    </p>
+  );
 }
 
-export default async function MenuPage() {
-  const dishes = await getDishes();
+async function SlowDishList() {
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+  return <DishList />;
+}
 
+export default function MenuPage() {
   return (
-    <main>
-      <h1>Menu</h1>
+    <main className="mx-auto max-w-5xl px-6 py-12">
+      <h1 className="mb-3 text-4xl font-bold">Our Menu</h1>
+      <p className="mb-8 text-gray-600">
+        Discover your favorite Ethiopian dishes.
+      </p>
 
-      <nav>
-        <Link href="/">Home</Link>
-        {" | "}
-        <Link href="/cart">Cart</Link>
-        {" | "}
-        <Link href="/checkout">Checkout</Link>
-      </nav>
-
-      <CategoryBar />
-        <FilterShell >
-         <DishList dishes={dishes} />
-        </FilterShell>
-      <MenuNavigation />
+      <Suspense fallback={<DishListFallback />}>
+        <SlowDishList />
+      </Suspense>
     </main>
   );
 }
